@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-joke',
@@ -6,10 +6,18 @@ import { Component, OnInit,Input } from '@angular/core';
   styleUrls: ['./joke.component.css']
 })
 export class JokeComponent implements OnInit {
-  @Input('joke') data: Joke;  
+  @Input('joke') data: Joke;
+  @Output() jokeDeleted = new EventEmitter();
+
+
+  deleteJoke() {
+    console.log(this.data);
+    this.jokeDeleted.emit(this.data);
+  }
   constructor() { }
 
-  
+
+
   ngOnInit() {
   }
 
