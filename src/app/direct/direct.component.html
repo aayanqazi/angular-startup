@@ -1,0 +1,3 @@
+<ul *ngFor="let country of people">
+  <li [ngStyle]="{'color':getColor(country.country)}">{{country.name}}<li>
+</ul>
