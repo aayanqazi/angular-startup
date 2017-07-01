@@ -3,3 +3,8 @@
     <!--<li [style.color]="getColor(country.country)"></li>-->
     <li [class.text-success]="country.country==='UK'" [class.text-danger]="country.country==='USA'">{{country.name}}</li>
 </ul>
+
+<!--ngNonBindable is a directives which will not compile from angular-->
+<div>
+  To render the name variable we use this syntax <pre ngNonBindable>{{ name }}</pre>
+</div>
