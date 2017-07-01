@@ -14,11 +14,32 @@ export class JokeComponent implements OnInit {
     console.log(this.data);
     this.jokeDeleted.emit(this.data);
   }
-  constructor() { }
+  constructor() {
+    console.log(`new - data is ${this.data}`);
+  }
+  ngDoCheck() {
+    console.log("ngDoCheck")
+  }
+  ngAfterContentInit() {
+    console.log("ngAfterContentInit");
+  }
+  ngAfterContentChecked() {
+    console.log("ngAfterContentChecked");
+  }
+  ngAfterViewInit() {
+    console.log("ngAfterViewInit");
+  }
+  ngAfterViewChecked() {
+    console.log("ngAfterViewChecked");
+  }
+  ngOnDestroy() {
+    console.log("ngOnDestroy");
+  }
 
 
 
   ngOnInit() {
+    console.log("Init hugaya");
   }
 
 }
