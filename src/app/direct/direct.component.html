@@ -1,3 +1,5 @@
 <ul *ngFor="let country of people">
-  <li [ngStyle]="{'color':getColor(country.country)}">{{country.name}}<li>
+  <!--<li [ngStyle]="{'color':getColor(country.country)}">{{country.name}}<li>-->
+    <!--<li [style.color]="getColor(country.country)"></li>-->
+    <li [class.text-success]="country.country==='UK'" [class.text-danger]="country.country==='USA'">{{country.name}}</li>
 </ul>
