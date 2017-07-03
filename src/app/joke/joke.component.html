@@ -2,13 +2,16 @@
   <h4 class="card-title"><ng-content select=".setup"></ng-content></h4>
   <!--<p class="card-text"
      [hidden]="data.hide"></p>-->
-     <template [ngIf]="!data.hide">
+     <!--<template [ngIf]="!data.hide">
        <p class="card-text">
        <ng-content select=".punchline"></ng-content>
        </p>
-     </template>
-  <a (click)="data.toggle()"
+     </template>-->
+     <p class="card-text" [style.display]="'none'">
+       {{data.punchline}}
+      </p>
+  <!--<a (click)="data.toggle()"
      class="btn btn-warning">Tell Me
-  </a>
+  </a>-->
   <a class="btn btn-danger" (click)="deleteJoke($event)">Delete</a>
 </div>
