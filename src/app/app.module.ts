@@ -7,6 +7,7 @@ import { JokeComponent } from './joke/joke.component';
 import { JokeListComponent } from './joke-list/joke-list.component';
 import { JokeFormComponent } from './joke-form/joke-form.component';
 import { DirectComponent } from './direct/direct.component';
+import { CcCardColorDirective } from './cc-card-color.directive';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { DirectComponent } from './direct/direct.component';
     JokeListComponent,
     JokeFormComponent,
     DirectComponent,
+    CcCardColorDirective,
   ],
   imports: [
     BrowserModule,
