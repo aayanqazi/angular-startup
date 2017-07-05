@@ -1,4 +1,4 @@
-<form novalidate [formGroup]="myForm">
+<form novalidate [formGroup]="myForm" (ngSubmit)="onSubmit()">
   <fieldset formGroupName="name">
     <div class="form-group" [ngClass]="{'has-success': firstName.valid && (firstName.dirty || firstName.touched) , 'has-danger': firstName.invalid && (firstName.dirty|| firstName.touched)}">
       <label>First Name</label>
@@ -24,7 +24,7 @@
   <div class="form-group" [ngClass]="{'has-success': password.valid && (password.dirty || password.touched) , 'has-danger': password.invalid && (password.dirty || password.touched)}">
     <label>Password</label>
     <input type="password" class="form-control" formControlName="password">
-        <div class="form-control-feedback" *ngIf="password.invalid && (password.dirty || password.touched)">
+    <div class="form-control-feedback" *ngIf="password.invalid && (password.dirty || password.touched)">
       <p *ngIf="password.errors.required">
         Password is required
       </p>
@@ -44,6 +44,9 @@
       <option *ngFor="let l of lang" [value]="l">{{l}}</option>
     </select>
   </div>
+  <button type="submit" class="btn btn-primary">
+    Submit
+  </button>
 </form>
 
 <pre>{{myForm.value |json}}</pre>
