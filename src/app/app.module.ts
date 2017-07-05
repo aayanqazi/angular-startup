@@ -10,6 +10,9 @@ import { JokeFormComponent } from './joke-form/joke-form.component';
 import { DirectComponent } from './direct/direct.component';
 import { CcCardColorDirective } from './cc-card-color.directive';
 import { FormComponent } from './form/form.component';
+import { DefaultPipe } from './default.pipe';
+import { PipeExampleComponent } from './pipe-example/pipe-example.component';
+import { CleanPipePipe } from './clean-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -20,6 +23,9 @@ import { FormComponent } from './form/form.component';
     DirectComponent,
     CcCardColorDirective,
     FormComponent,
+    DefaultPipe,
+    PipeExampleComponent,
+    CleanPipePipe,
   ],
   imports: [
     BrowserModule,

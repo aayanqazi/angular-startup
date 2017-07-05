@@ -22,6 +22,8 @@ export class FormComponent implements OnInit {
       "email": this.email
     });
     this.form.valueChanges
+        .debounceTime(1000)
+        .distinctUntilChanged()
         .filter(data => this.form.valid)
         .map(data => {
           data.comment = data.comment.replace(/<(?:.|\n)*?>/gm, '');
