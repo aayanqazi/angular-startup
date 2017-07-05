@@ -14,6 +14,7 @@ import { DefaultPipe } from './default.pipe';
 import { PipeExampleComponent } from './pipe-example/pipe-example.component';
 import { CleanPipePipe } from './clean-pipe.pipe';
 import { FormPracticeComponent } from './form-practice/form-practice.component';
+import { ReactivemodelformComponent } from './reactivemodelform/reactivemodelform.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { FormPracticeComponent } from './form-practice/form-practice.component';
     PipeExampleComponent,
     CleanPipePipe,
     FormPracticeComponent,
+    ReactivemodelformComponent,
   ],
   imports: [
     BrowserModule,
