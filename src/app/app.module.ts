@@ -13,6 +13,7 @@ import { FormComponent } from './form/form.component';
 import { DefaultPipe } from './default.pipe';
 import { PipeExampleComponent } from './pipe-example/pipe-example.component';
 import { CleanPipePipe } from './clean-pipe.pipe';
+import { FormPracticeComponent } from './form-practice/form-practice.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { CleanPipePipe } from './clean-pipe.pipe';
     DefaultPipe,
     PipeExampleComponent,
     CleanPipePipe,
+    FormPracticeComponent,
   ],
   imports: [
     BrowserModule,

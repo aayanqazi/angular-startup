@@ -1,0 +1,51 @@
+<form novalidate [formGroup]="myForm">
+  <fieldset formGroupName="name">
+    <div class="form-group" [ngClass]="{'has-success': firstName.valid && (firstName.dirty || firstName.touched) , 'has-danger': firstName.invalid && (firstName.dirty|| firstName.touched)}">
+      <label>First Name</label>
+      <input type="text" class="form-control" formControlName="firstName">
+    </div>
+    <div class="form-group" [ngClass]="{'has-success': lastName.valid && (lastName.dirty || lastName.touched) , 'has-danger': lastName.invalid && (lastName.dirty|| lastName.touched)}">
+      <label>Last Name</label>
+      <input type="text" class="form-control" formControlName="lastName">
+    </div>
+  </fieldset>
+  <div class="form-group" [ngClass]="{'has-success': email.valid && (email.dirty || email.touched) , 'has-danger': email.invalid && (email.dirty|| email.touched)}">
+    <label>Email</label>
+    <input type="email" formControlName="email" class="form-control">
+    <div class="form-control-feedback" *ngIf="email.invalid && (email.dirty || email.touched)">
+      <p *ngIf="email.errors.required">
+        Email is required
+      </p>
+      <p *ngIf="email.errors.pattern">
+        The email address must contain at least the @ character
+      </p>
+    </div>
+  </div>
+  <div class="form-group" [ngClass]="{'has-success': password.valid && (password.dirty || password.touched) , 'has-danger': password.invalid && (password.dirty || password.touched)}">
+    <label>Password</label>
+    <input type="password" class="form-control" formControlName="password">
+        <div class="form-control-feedback" *ngIf="password.invalid && (password.dirty || password.touched)">
+      <p *ngIf="password.errors.required">
+        Password is required
+      </p>
+      <p *ngIf="password.errors.maxlength">
+        password must contain maximum 8 character
+      </p>
+    </div>
+
+  </div>
+  <div class="form-group" [ngClass]="{
+        'has-danger': language.invalid && (language.dirty || language.touched),
+        'has-success': language.valid && (language.dirty || language.touched)
+      }">
+    <label>Languages</label>
+    <select class="form-control" formControlName="language">
+      <option value=""> Please select a language </option>
+      <option *ngFor="let l of lang" [value]="l">{{l}}</option>
+    </select>
+  </div>
+</form>
+
+<pre>{{myForm.value |json}}</pre>
+
+<pre>{{myForm.controls.email.valid}}</pre>
